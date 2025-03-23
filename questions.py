@@ -26,8 +26,8 @@ correct_answers_index = [1, 2, 0, 3, 1]
 
 # Se inicia el puntaje del juego
 score=0
-# El usuario deberá contestar 3 preguntas aleatorias
-questions_to_ask = random.choices(list(zip(questions, answers, correct_answers_index)), k=3)
+# El usuario deberá contestar 3 preguntas aleatorias diferentes
+questions_to_ask = random.sample(list(zip(questions, answers, correct_answers_index)), k=3)
 
 for k,elem in enumerate(questions_to_ask):
     # Se muestra la pregunta y las respuestas posibles
